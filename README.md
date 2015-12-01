@@ -35,22 +35,8 @@ Optional arguments are:
          of curve parameter verification(this will speed up the
          verification)
 
-Script expects following directory structure:
-  - master  
-    |--src  
-       |--trx_checker.py  
-       |--utils.py  
-    |--curve_parameters  
-       |--128_664  
-          |--raw_data.txt  
-          |--tweets.txt  
-               ...  
-       |--192_640  
-          |--raw_data.txt  
-          |--tweets.txt  
-               ...  
-
-If you want to check parameters for one of the curves
+Script expects to find given directory in curve_parameters directory,
+so if you want to check parameters for one of the curves
 published on the website (http://trx.epfl.ch/),
 just download the corresponding .zip file end extract it
 to the curve_parameters directory.
