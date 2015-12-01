@@ -28,34 +28,34 @@ There is one mandatory command line argument:
   - the name of the directory where all the needed files
     are located.
 Optional arguments are:
-  -t NUM_THREADS, set number of threads to be used
-  -ss, skip verification of Sloth
-  -sc, skip verification of curve parameters
-  -r , use the information from rejected_curves file in process
-       of curve parameter verification(this will speed up the
-       verification)
+  - -t NUM_THREADS, set number of threads to be used
+  - -ss, skip verification of Sloth
+  - -sc, skip verification of curve parameters
+  - -r , use the information from rejected_curves file in process
+         of curve parameter verification(this will speed up the
+         verification)
 
 Script expects following directory structure:
-  - master
-    |--src
-       |--trx_checker.py
-       |--utils.py
-    |--curve_parameters
-       |--128_664
-          |--raw_data.txt
-          |--tweets.txt
-               ...
-       |--192_640
-          |--raw_data.txt
-          |--tweets.txt
-               ...
+  - master  
+    |--src  
+       |--trx_checker.py  
+       |--utils.py  
+    |--curve_parameters  
+       |--128_664  
+          |--raw_data.txt  
+          |--tweets.txt  
+               ...  
+       |--192_640  
+          |--raw_data.txt  
+          |--tweets.txt  
+               ...  
 
 If you want to check parameters for one of the curves
 published on the website (http://trx.epfl.ch/),
 just download the corresponding .zip file end extract it
 to the curve_parameters directory.
 
-Example: Check parameters for curve located in dir '128_664'
+Example: Check parameters for curve located in dir '128_664'  
 sage -python trx_checker.py 128_664
 
 The result will be dumped in the same directory in the file
